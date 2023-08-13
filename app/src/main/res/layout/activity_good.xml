@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+    <!-- 로고 START -->
+    <TextView
+        android:id="@+id/text_logo"
+        android:layout_width="209dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="AFPC"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+    <!-- 로고 END -->
+
+    <!-- 메인 START -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/image_good"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:background="@color/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/btn_good"
+            android:layout_width="330dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_round"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Good!"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_good"/>
+
+        <TextView
+            android:id="@+id/text_PoseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_good"/>
+
+        <TextView
+            android:id="@+id/text_PoseInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_PoseName">
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 메인 END -->
+
+    <!-- 하단 내비게이션 바 START -->
+    <ImageView
+        android:id="@+id/box_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/box_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/navi_home"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="170dp"
+        android:src="@drawable/ic_home_2"
+        android:onClick="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/box_navigation"
+        app:layout_constraintStart_toStartOf="parent">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/navi_user"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="170dp"
+        android:src="@drawable/ic_user"
+        android:onClick="User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/box_navigation">
+    </ImageView>
+    <!-- 하단 내비게이션 바 END -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 저장 공간 권한 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 인터넷 연결 권한 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 블루투스 권한 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <!-- android.os.Build 클래스에서 기본 정보 받아오기 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 맥 주소 가져오기 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 폰 번호 가져오기 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <!-- application -->
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hcd"
+        tools:targetApi="31">
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="LoginActivity" >
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="RegisterActivity" >
+        </activity>
+
+        <activity
+            android:name=".PoseActivity"
+            android:label="PoseActivity" >
+        </activity>
+
+        <activity
+            android:name=".BadActivity"
+            android:label="BadActivity" >
+        </activity>
+
+        <activity
+            android:name=".GoodActivity"
+            android:label="GoodActivity" >
+        </activity>
+
+        <activity
+            android:name=".UserActivity"
+            android:label="UserActivity" >
+        </activity>
+
+
+    </application>
+
+</manifest>

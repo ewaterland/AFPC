@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserActivity">
+
+    <!-- 로고 START -->
+    <TextView
+        android:id="@+id/text_logo"
+        android:layout_width="209dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="AFPC"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+    <!-- 로고 END -->
+
+    <!-- 로그아웃 START -->
+    <TextView
+        android:id="@+id/text_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="Logout"
+        android:text="Sign Out"
+        android:textColor="#7095C6"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+    <!-- 로그아웃 END -->
+
+    <LinearLayout
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_logo">
+
+        <EditText
+            android:id="@+id/editText_Name"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+
+            android:text="님 반가워요!"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:text="Email Address"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="normal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+    <!-- 메인 START -->
+    <ScrollView
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        app:layout_constraintTop_toBottomOf="@+id/text_email"
+        app:layout_constraintBottom_toTopOf="@+id/box_navigation">
+
+        <LinearLayout
+            android:id="@+id/view_sub"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:text="Age"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Name" />
+
+            <EditText
+                android:id="@+id/editText_Age"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_age" />
+
+            <TextView
+                android:id="@+id/text_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:text="Gender"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_gender"
+                tools:layout_editor_absoluteX="111dp"
+                tools:layout_editor_absoluteY="281dp">
+
+                <RadioButton
+                    android:id="@+id/rd_gender_f"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/rd_gender_m"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/text_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:text="Height"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+            <EditText
+                android:id="@+id/editText_Height"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_height" />
+
+            <TextView
+                android:id="@+id/text_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:text="Weight"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Height" />
+
+            <EditText
+                android:id="@+id/editText_Weight"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_weight" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="347dp"
+                android:layout_height="60dp"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_round"
+
+                android:enabled="false"
+                android:fontFamily="@font/inter_semibold"
+                android:onClick="Save"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Weight" />
+
+            <Button
+                android:id="@+id/btn_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/back"
+
+                android:onClick="withdraw"
+                android:text="Withdraw from AFPC"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+            </LinearLayout>
+    </ScrollView>
+    <!-- 메인 END -->
+
+    <!-- 하단 내비게이션 바 START -->
+    <ImageView
+        android:id="@+id/box_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/box_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/navi_home"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="170dp"
+        android:onClick="Home"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@+id/box_navigation"
+        app:layout_constraintEnd_toEndOf="@+id/box_navigation"
+        app:layout_constraintStart_toStartOf="@+id/box_navigation">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/navi_user"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="170dp"
+        android:src="@drawable/ic_user_2"
+        app:layout_constraintBottom_toBottomOf="@+id/box_navigation"
+        app:layout_constraintEnd_toEndOf="@+id/box_navigation"
+        app:layout_constraintStart_toStartOf="@+id/box_navigation">
+
+    </ImageView>
+    <!-- 하단 내비게이션 바 END -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
